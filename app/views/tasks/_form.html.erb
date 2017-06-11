@@ -1,6 +1,9 @@
 <%= form_for(task) do |f| %>
-  <%= f.label :content,label_of_form %>
+  <%= f.label :content,label_of_content_form %>
   <%= f.text_field :content %>
-  
+  <br>
+  <%= f.label :status,label_of_status_form %>
+  <%= f.select :status, ["未着手","進行中","完了","放棄"] %>
+  <br>
   <%= f.submit value_of_submit %>
 <% end %>
