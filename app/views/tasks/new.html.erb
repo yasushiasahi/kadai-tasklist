@@ -1,0 +1,10 @@
+<h1>新しいタスクの作成</h1>
+
+<%= form_for(@new_task) do |f| %>
+  <%= f.label :content,"タスクを入力"  %>
+  <%= f.text_field :content %>
+  
+  <%= f.submit "作成" %>
+<% end %>
+
+<%= link_to "タスク一覧に戻る",tasks_path %>
