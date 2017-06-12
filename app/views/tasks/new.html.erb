@@ -1,11 +1,10 @@
 <h1>新しいタスクの作成</h1>
 
+
 <%= 
   render "form", 
     task: @task, 
     label_of_content_form: "タスクを入力",
-    label_of_status_form: "ステータスを入力",
     value_of_submit: "作成"
 %>
 
-<%= link_to "タスク一覧に戻る",tasks_path %>

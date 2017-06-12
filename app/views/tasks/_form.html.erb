@@ -1,9 +1,25 @@
-<%= form_for(task) do |f| %>
-  <%= f.label :content,label_of_content_form %>
-  <%= f.text_field :content %>
-  <br>
-  <%= f.label :status,label_of_status_form %>
-  <%= f.select :status, ["未着手","進行中","完了","放棄"] %>
-  <br>
-  <%= f.submit value_of_submit %>
-<% end %>
+<div class="row">
+
+　<div class="col-lg-offset-3 col-md-6" >
+　<div class="col-md-offset-2 col-md-8" >
+　<div class="col-sm-offset-2 col-sm-8" >
+　<div class="col-xs-12">
+　  
+    <%= form_for(task) do |f| %>
+      
+      <div class="form-group">
+        <%= f.label :content,label_of_content_form %>
+        <%= f.text_field :content, class: "form-control" %>
+    
+          <%= f.label :status,"ステータスを選択" %>
+          <%= f.select :status, ["未着手","進行中","完了","放棄"], {} , class: "form-control" %>
+    
+        <%= f.submit value_of_submit, class: 'btn btn-primary' %>
+      </div>
+      
+    <% end %>
+　</div>
+　</div>
+　</div>
+　</div>
+</div>
