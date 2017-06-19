@@ -1,18 +1,20 @@
 class TasksController < ApplicationController
   before_action :set_selected_id,only:[:edit,:show,:update,:destroy]
+  before_action :require_user_logged_in
   
   def index
     @all_tasks = Task.all
   end
   
   def create
-    @task = Task.new(params_task)
+    @task = current_user.tasks.build(params_task)
     result = @task.save
     move_to_index_with_display_flash(result,:new,"作成")
+    
   end
   
   def new
-    @task = Task.new
+    @task = current_user.tasks.build
   end
   
   def edit

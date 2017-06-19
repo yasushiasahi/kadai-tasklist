@@ -17,6 +17,9 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to '新しいタスクの作成', new_task_path %></li>
+          <% mr = current_user.name + "氏のアカウント" %>
+          <li><%= link_to mr, user_path(current_user.id) %></li>
+          <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
