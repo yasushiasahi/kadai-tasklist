@@ -9,7 +9,7 @@
         <%= f.text_field :content, class: "form-control" %>
     
           <%= f.label :status,"ステータスを選択" %>
-          <%= f.select :status, ["未着手","進行中","完了","放棄"], {} , class: "form-control" %>
+          <%= f.select :status, ["未着手","進行中","完了","完了と見せかけて放棄"], {} , class: "form-control" %>
     
         <%= f.submit value_of_submit, class: 'btn btn-primary' %>
       </div>
