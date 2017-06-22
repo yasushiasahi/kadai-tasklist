@@ -27,11 +27,11 @@ module SessionsHelper
   end
   
   def number_of_completed_tasks
-    completed_tasks = current_user.tasks.where(status: ["未着手","進行中"]).count
+    completed_tasks = current_user.tasks.where(status: ["完了","完了と見せかけて放棄"]).count
     if completed_tasks > 0
-      return "完了済のタスクはござらぬ。"
-    else
       return "ご苦労であった。"
+    else
+      return "完了済のタスクはござらぬ。"
     end
   end
 end

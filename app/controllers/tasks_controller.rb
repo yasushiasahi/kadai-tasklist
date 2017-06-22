@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
-  before_action :crrect_user,only:[:edit,:show,:update,:destroy]
   before_action :require_user_logged_in
+  before_action :crrect_user,only:[:edit,:show,:update,:destroy]
   
   def create
     @task = current_user.tasks.build(params_task)
